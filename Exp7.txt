@@ -1,0 +1,95 @@
+Exp 7
+
+
+
+
+ng add @angular/material
+
+
+
+
+
+📌 src/app/app.ts
+
+
+import { Component } from '@angular/core';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,   // Angular 17+ standalone component
+  imports: [MatSidenavModule],
+  templateUrl: './app.html',
+  styleUrls: ['./app.css']
+})
+export class AppComponent {
+  title = 'materialApp';
+}
+
+
+
+
+
+
+
+
+📌 src/app/app.html
+
+<mat-sidenav-container class="tp-container">
+  <!-- Side Navigation -->
+  <mat-sidenav mode="side" opened>
+    <section class="tp-section">
+      <span>File</span>
+    </section>
+    <section class="tp-section">
+      <span>Edit</span>
+    </section>
+  </mat-sidenav>
+
+  <!-- Main Content -->
+  <mat-sidenav-content>
+    Main content
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
+
+
+📌 src/app/app.css
+
+.tp-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+}
+
+.tp-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100px;
+}
+
+
+
+
+
+src/main.ts
+
+
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app';
+
+bootstrapApplication(AppComponent)
+  .catch(err => console.error(err));
+
+
+
+
+

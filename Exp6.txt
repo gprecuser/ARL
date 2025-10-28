@@ -1,0 +1,94 @@
+Exp6
+
+HTML
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enroll Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Available Courses</h1>
+
+  <div class="card">
+    <img src="C:\Users\venky\Downloads\javascript-logo-javascript-icon-transparent-free-png.webp" alt="Course 1">
+    <br>
+    <button onclick="enroll()">Enroll</button>
+  </div>
+
+  <div class="card">
+    <img src="C:\Users\venky\Downloads\images.png" alt="Course 2">
+    <br>
+    <button onclick="enroll()">Enroll</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+CSS
+
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.card {
+  display: inline-block;
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 250px; 
+  height: 150px; 
+  border-radius: 8px;
+  object-fit: cover; 
+}
+
+
+.card button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.card button:hover {
+  background-color: #218838;
+}
+
+
+
+JavaScript
+
+
+
+function enroll() {
+  alert("Thanks for enrolling!");
+}

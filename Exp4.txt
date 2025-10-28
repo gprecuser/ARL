@@ -1,0 +1,134 @@
+Exp4
+
+HTML
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome to the Portal</h1>
+
+  <!-- Buttons -->
+  <div class="btn-container">
+    <button onclick="showLogin('faculty')">Faculty</button>
+    <button onclick="showLogin('student')">Student</button>
+  </div>
+
+  <!-- Faculty Login -->
+  <div class="login-box" id="facultyLogin">
+    <h2>Faculty Login</h2>
+    <input type="email" placeholder="Enter Faculty Email">
+    <input type="password" placeholder="Enter Password">
+    <button>Login</button>
+  </div>
+
+  <!-- Student Login -->
+  <div class="login-box" id="studentLogin">
+    <h2>Student Login</h2>
+    <input type="email" placeholder="Enter Student Email">
+    <input type="password" placeholder="Enter Password">
+    <button>Login</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+    
+
+
+CSS
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.btn-container {
+  margin-bottom: 20px;
+}
+
+.btn-container button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-container button:hover {
+  background-color: #0056b3;
+}
+
+.login-box {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background-color: #218838;
+}
+
+
+JavaScript
+
+
+function showLogin(type) {
+ 
+  document.getElementById('facultyLogin').style.display = 'none';
+  document.getElementById('studentLogin').style.display = 'none';
+
+  if (type === 'faculty') {
+    document.getElementById('facultyLogin').style.display = 'block';
+  } else if (type === 'student') {
+    document.getElementById('studentLogin').style.display = 'block';
+  }
+}
